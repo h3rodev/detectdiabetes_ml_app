@@ -51,7 +51,7 @@ def getData(p, g, bp, st, i, bmi, dpf, a):
         outcome = "Not Diabetic"
 
     data = {
-        "probability": classifier.score(X_test, y_test),
+        "probability": round(classifier.score(X_test, y_test), 2),
         "result": outcome
     }
     return data
