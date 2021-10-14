@@ -12,20 +12,13 @@ import matplotlib.pyplot as plt
 # 2. Read the the dataset
 
 df = pd.read_csv("diabetesdata.csv")
-#df.replace('?', -9999, inplace=True)
-#df.drop(['id'], 1, inplace=True)
-df
 
 # 3. EDA
-
-# sns.set(rc={'figure.figsize': (10, 10)})
-# sns.lineplot(data=df, x="Glucose", y="Outcome")
-# plt.show()
 
 x = np.array(df.drop(['Outcome'], 1))
 y = np.array(df['Outcome'])
 
-X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
+X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.3)
 # print(X_train.shape)
 # print(X_test.shape)
 
